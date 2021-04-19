@@ -1,1 +1,1 @@
-python tests_junit.py
+python .\tests_junit.py
