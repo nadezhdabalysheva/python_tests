@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+   agent { docker { image 'python:3.5.1' }}
 
    stages {
       stage('Build') {
@@ -11,10 +11,12 @@ pipeline {
       stage('List') {
         steps{      
           bat("dir /B ${JENKINS_HOME}")
-          sh 'python tests_junit.py'
         }
 
-
+      stage('runpy') {
+        steps{      
+          sh 'python tests_junit.py'
+        }
         }
    
    stage('Test') {
