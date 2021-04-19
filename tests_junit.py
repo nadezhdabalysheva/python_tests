@@ -1,10 +1,10 @@
 import unittest
 import xmlrunner
-import io
+# import io
 
-out = io.BytesIO()
+# out = io.BytesIO()
 unittest.main(
-    testRunner=xmlrunner.XMLTestRunner(output=out),
+    testRunner=xmlrunner.XMLTestRunner(output='test-reports'),
     failfast=False,
     buffer=False,
     catchbreak=False,
