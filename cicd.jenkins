@@ -12,6 +12,7 @@ pipeline {
         steps{      
           bat("dir /B ${JENKINS_HOME}")
         }
+        }
 
       stage('runpy') {
         steps{      
