@@ -1,4 +1,14 @@
 import unittest
+import xmlrunner
+import io
+
+out = io.BytesIO()
+unittest.main(
+    testRunner=xmlrunner.XMLTestRunner(output=out),
+    failfast=False,
+    buffer=False,
+    catchbreak=False,
+    exit=False)
 
 
 class TestStringMethods(unittest.TestCase):
@@ -18,4 +28,8 @@ class TestStringMethods(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(
+        testRunner=xmlrunner.XMLTestRunner(output='test-reports'),
+        failfast=False,
+        buffer=False,
+        catchbreak=False)
